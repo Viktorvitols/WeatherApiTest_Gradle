@@ -42,7 +42,7 @@ public class weatherStepDefs {
     }
 
     @Then("weather_id is (.*)")
-    public void check_id(Integer weather_id) {
+    public void check_weather_id(Integer weather_id) {
         Assertions.assertEquals(weather_id, response.getWeather().get(0).getWeather_id(), "Wrong id");
     }
 
@@ -120,25 +120,45 @@ public class weatherStepDefs {
     public void check_type(Double type) {
         Assertions.assertEquals(type, response.getSys().getType(), "Wrong type");
     }
+
     @Then("sys_id is (.*)")
     public void check_sys_id(Integer sys_id) {
         Assertions.assertEquals(sys_id, response.getSys().getSys_id(), "Wrong sys id");
     }
+
     @Then("message is (.*)")
     public void check_message(String message) {
         Assertions.assertEquals(message, response.getSys().getMessage(), "Wrong message");
     }
+
     @Then("country is (.*)")
     public void check_country(String country) {
         Assertions.assertEquals(country, response.getSys().getCountry(), "Wrong country");
     }
+
     @Then("sunrise is (.*)")
     public void check_sunrise(Double sunrise) {
         Assertions.assertEquals(sunrise, response.getSys().getSunrise(), "Wrong sunrise time");
     }
+
     @Then("sunset is (.*)")
     public void check_sunset(Double sunset) {
         Assertions.assertEquals(sunset, response.getSys().getSunset(), "Wrong sunset time");
+    }
+
+    @Then("id is (.*)")
+    public void check_id(Integer id) {
+        Assertions.assertEquals(id, response.getId(), "Wrong id");
+    }
+
+    @Then("name is (.*)")
+    public void check_name(String name) {
+        Assertions.assertEquals(name, response.getName(), "Wrong name");
+    }
+
+    @Then("cod is (.*)")
+    public void check_cod(Double cod) {
+        Assertions.assertEquals(cod, response.getCod(), "Wrong cod");
     }
 
 }

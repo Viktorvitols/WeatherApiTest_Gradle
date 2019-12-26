@@ -1,4 +1,5 @@
 Feature: We are testing weather API
+
   Scenario: Weather check
     Given city is: London
     Given country is: uk
@@ -34,3 +35,7 @@ Feature: We are testing weather API
     And country is GB
     And sunrise is 1485762037
     And sunset is 1485794875
+
+    And id is 2643743
+    And name is London
+    And cod is 200

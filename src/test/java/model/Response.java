@@ -16,6 +16,9 @@ public class Response {
     private Clouds clouds;
     private Integer dt;
     private Sys sys;
+    private Integer id;
+    private String name;
+    private Double cod;
 
     public Coord getCoord() {
         return coord;
@@ -87,5 +90,29 @@ public class Response {
 
     public void setSys(Sys sys) {
         this.sys = sys;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getCod() {
+        return cod;
+    }
+
+    public void setCod(Double cod) {
+        this.cod = cod;
     }
 }
